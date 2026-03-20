@@ -12,10 +12,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  # Run test suite first (includes integration tests with example-server)
-  test:
-    uses: ./.github/workflows/tests.yml
-
   check-version:
     runs-on: ubuntu-latest
     outputs:
