@@ -26,8 +26,8 @@ var room: ColyseusRoom
 
 func _ready():
     # Connect to server
-    client = ColyseusClient.new()
-    client.connect_to("ws://localhost:2567")
+    client = Colyseus.create_client()
+    client.set_endpoint("ws://localhost:2567")
 
     # Join a room
     room = client.join_or_create("my_room")
